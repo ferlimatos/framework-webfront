@@ -5,17 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fernanda Matos</title>
+    <style>
+        /* Mobile First */
+
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #FAFFC4;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 50%;
+        }
+
+        h1 {
+            color: #FF80C7;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-apresentacao {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-sobre {
+            border: solid rgb(41, 5, 74) 1px;
+            border-radius: 4px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .img-perfil {
+            display: flex;
+            align-self: center;
+            height: 200px;
+            width: 200px;
+            padding: 20px;
+        }
+    </style>
 </head>
 
 <body>
     <main>
         <div class="card-apresentacao">
-            <img src="https://avatars.githubusercontent.com/u/101283069?v=4" alt="">
+            <div class="img-perfil">
+                <img src="https://avatars.githubusercontent.com/u/101283069?v=4" alt="">
+            </div>
             <h1>Fernanda Matos</h1>
             <span>Desenvolvedora Web & Mobile</span>
-            <p>Contato: <a href="tel:+5562992513478">(62) 99251-3478</a></p>
-            <p>Email: <a href="mailto:fernandamatos.design@gmail.com">fernandamatos.design@gmail.com</a></p>
-            <p>Github: <a href="https://github.com/ferlimatos" target="_blank">github.com/ferlimatos</a></p>
+            <div class="contato">
+                <p>Contato: <a href="tel:+5562992513478">(62) 99251-3478</a></p>
+                <p>Email: <a href="mailto:fernandamatos.design@gmail.com">fernandamatos.design@gmail.com</a></p>
+                <p>Github: <a href="https://github.com/ferlimatos" target="_blank">github.com/ferlimatos</a></p>
+            </div>
         </div>
 
         <div class="card-sobre">
