@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática guiada — Flexbox</title>
+    <style>
+        main {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            flex: 1;
+            background-color: rgb(213, 178, 247);
+            border: solid rgb(41, 5, 74) 1px;
+            border-radius: 4px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        @media (max-width: 320px) {
+            main {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Frameworks para Web Front-End </h1>
+    <main>
+        <div class="card">
+            <p>React</p>
+        </div>
+        <div class="card">
+            <p>Vue</p>
+        </div>
+        <div class="card">
+            <p>Angular</p>
+        </div>
+    </main>
+</body>
+
+</html>
