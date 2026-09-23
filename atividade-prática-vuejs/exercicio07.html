@@ -1,20 +1,47 @@
 <!doctype html>
+
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Exercício 7</title>
+
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
+
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <button @click="mostrarMensagem">
+        {{ mensagemVisivel ? "Ocultar" : "Mostrar" }}
+      </button>
+
+      <p v-if="mensagemVisivel">{{ mensagem }}</p>
+    </div>
 
     <script>
       const { createApp, ref } = Vue;
 
       createApp({
-        data() {
-          return {};
+        setup() {
+          const mensagem = ref("Bem-vindo à disciplina de Frameworks!");
+
+          const mensagemVisivel = ref(true);
+
+          function mostrarMensagem() {
+            if (mensagemVisivel.value === true) {
+              mensagemVisivel.value = false;
+            } else {
+              mensagemVisivel.value = true;
+            }
+          }
+
+          return {
+            mensagem,
+            mensagemVisivel,
+            mostrarMensagem,
+          };
         },
       }).mount("#app");
     </script>
