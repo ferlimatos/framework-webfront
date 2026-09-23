@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 6</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <input type="number" v-model="idade" placeholder="Digite sua idade" />
+      <button @click="verificarIdade">Verificar</button>
+      <p>{{mensagem}}</p>
+    </div>
+  </body>
+
+  <script>
+    const { createApp, ref } = Vue;
+
+    createApp({
+      setup() {
+        const idade = ref(0);
+        const mensagem = ref("");
+
+        function verificarIdade() {
+          if (idade.value >= 18) {
+            mensagem.value = "Maior de idade";
+          } else {
+            mensagem.value = "Menor de idade";
+          }
+        }
+
+        return {
+          idade,
+          mensagem,
+          verificarIdade,
+        };
+      },
+    }).mount("#app");
+  </script>
+</html>
